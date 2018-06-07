@@ -6,6 +6,7 @@ Fine tuning vgg16 and use the model we have trained to detect the moving target 
 * fine-tuning vgg16 获得模型<br>
 * 提取前景图像 <br>
 * 通过模型识别判断<br>
-**前景图像:**<br>
+**foreground:**<br>
 <img src="https://github.com/qiejun/video-moving-target-detect-cnn-tensorflow/blob/master/picture/foreground523.png" width="400" height="250" alt="foreground"><br>
-**运动目标图：**<br>
+**frame：**<br>
+<img src="https://github.com/qiejun/video-moving-target-detect-cnn-tensorflow/blob/master/picture/frame523.png" width="400" height="250" alt="foreground"><br>
