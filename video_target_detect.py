@@ -71,8 +71,9 @@ def moveing_target_detect(video_file,target_name,meta_path,model_path):
 
     cap.release()
     cv2.destroyAllWindows()
+    sess.close()
 
 moveing_target_detect(video_file='E:\\video_data\\people2.mp4',
                       target_name='people',
-                      meta_path='D:\\python\\smoke_detection_4.23\\save\\6.5\\smoke.ckpt2000.meta',
-                      model_path='D:\\python\\smoke_detection_4.23\\save\\6.5\\smoke.ckpt2000')
+                      meta_path='./save/model.ckpt2000.meta',
+                      model_path='./save/model.ckpt2000')
