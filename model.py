@@ -40,7 +40,7 @@ class Model(object):
         iter,batch_num= 0, 0
         train_avg_acc,train_avg_loss = 0, 0
         for epoch in range(self.epoch):
-            data = train_data('E:\\smoke_train_data\\smoke_data_4.23\\train',batch_size=8,resize_shape=(224,224))
+            data = train_data('E:\\train_data\\train',batch_size=8,resize_shape=(224,224))
             for train_x, train_y in data:
                 _, train_loss, train_acc = sess.run([self.optimizer,self.loss,self.accuracy],feed_dict = {self.input_x:train_x,self.input_y:train_y})
                 train_avg_loss+=train_loss
@@ -49,7 +49,7 @@ class Model(object):
                     print('epoch:',epoch,',iter:',iter,',train loss:',train_avg_loss/10,',train acc:',train_avg_acc/10)
                     train_avg_acc,train_avg_loss = 0,0
                 if iter%50==0:
-                     test_x, test_y, num_batch = test_data('E:\\smoke_train_data\\smoke_data_4.23\\test',16,batch_num=batch_num,reshap_size=(224,224))
+                     test_x, test_y, num_batch = test_data('E:\\train_data\\test',batch_size=16,batch_num=batch_num,reshap_size=(224,224))
                      test_loss, test_acc = sess.run([self.loss,self.accuracy],feed_dict={self.input_x:test_x,self.input_y:test_y})
                      print('epoch:',epoch,',iter:',iter,',-->test loss:',test_loss,'-->test acc:',test_acc)
                      batch_num = batch_num+1
